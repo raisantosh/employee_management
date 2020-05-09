@@ -154,6 +154,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionview (>= 5.0.7)
   byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
