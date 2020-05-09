@@ -32,3 +32,7 @@ navbar-header {
 a:visited {
     color: smokewhite;
 }
+
+table, th, td {
+  border: 1px solid gray;
+}
