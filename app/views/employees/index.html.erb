@@ -3,7 +3,8 @@
   <div class='row py-3 px-3'>
     <div class='col-12 col-sm-8'>
   
-      <h1 style="border-bottom: double 5px gray; padding: 10px;">Employee Management</h1>
+      <span></span><%= link_to 'Create Employee', new_employee_path %></span>
+
       <table id='employee-table' class="table table-hover">
         <thead>
           <tr>
@@ -21,12 +22,12 @@
             <tr>
               <td><%= employee.name %></td>
               <td><%= employee.email %></td>
-              <td><%= employee.phone %></td>
+              <td><%= number_to_phone(employee.phone) %></td>
               <td><%= employee.age %></td>
               <td><%= employee.gender %></td>
               <td><%= link_to 'Show', employee %></td>
               <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
-              <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Delete', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
           <% end %>
         </tbody>
@@ -34,7 +35,6 @@
       
       <br>
       
-      <%= link_to 'Create Employee', new_employee_path %>
     </div>
   </div>
 </div>
