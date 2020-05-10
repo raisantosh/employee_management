@@ -30,19 +30,8 @@
   <div class="field">
     <%= f.label :phone %>
     <%= f.text_field :phone, class: 'form-control' %>
-  </div>
-
-  <div class="field">
-    <%= f.label :age %>
-    <%= f.text_field :age, class: 'form-control' %>
-  </div>
-
-  <div class="field">
-    <%= f.label :gender %>
-    <%= f.text_field :gender, class: 'form-control' %>
-  </div>
-  
-  <div class="field">
+  </div><br/>
+    <div class="field">
     <%= f.label :position %>
     <%= f.text_field :position, class: 'form-control' %>
   </div>
@@ -50,11 +39,32 @@
 
   <div class="field">
     <%= f.label :start_date %>
-    <%= f.text_field :start_date, class: 'form-control' %>
+    <%= f.text_field :start_date, class: 'form-control', id: "start_date" %>
   </div><br/>
 
+  <div class="field">
+    <%= f.label :age %>
+    <%= f.select :age, (18..100), class: 'form-control' %>
+  </div><br/>
+
+  <div class="field">
+    <%= f.label :gender %>
+    <%= f.select :gender, %w{Male Female Others}, :prompt => 'Select', required: true, placeholder: 'Gender', class: 'form-control' %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Submit", class: "btn btn-primary" %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  // calender for start_date
+  const el = document.getElementById('start_date');
+  flatpickr(el, {
+    enableTime:      true,
+    altInput:        true,
+    altFormat:       "F j, Y",
+    dateFormat:      "Y-m-d",
+    minuteIncrement: 1
+  });
+</script>
