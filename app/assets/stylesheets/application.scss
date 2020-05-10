@@ -10,29 +10,29 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ 
 
+// header {
+//     margin-left: 150px;
+//     margin-right: 150px;
+// }
 
-header {
-    margin-left: 150px;
-    margin-right: 150px;
-}
+// main {
+//     margin-left: 150px;
+//     margin-right: 150px;
+// }
+
 
 main {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-right: 135px;
+    margin-left: 135px;
 }
 
-navbar-header {
-    color: smokewhite !important;
-}
 
-a:visited {
-    color: smokewhite;
-}
-
-table, th, td {
-  border: 1px solid gray;
+.header-title {
+    color: black;
+    font-weight: bold;
 }

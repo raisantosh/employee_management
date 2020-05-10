@@ -3,7 +3,7 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @employee.name %>
+  <%= @employee.full_name %>
 </p>
 
 <p>
@@ -13,7 +13,7 @@
 
 <p>
   <strong>Phone:</strong>
-  <%= @employee.phone %>
+  <%= number_to_phone(@employee.phone) %>
 </p>
 
 <p>
@@ -24,6 +24,16 @@
 <p>
   <strong>Gender:</strong>
   <%= @employee.gender %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @employee.position %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @employee.start_date.strftime("%b %d, %Y") %>
 </p>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
