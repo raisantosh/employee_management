@@ -1,40 +1,42 @@
-<h2>Employee Details</h2>
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @employee.full_name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @employee.email %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= number_to_phone(@employee.phone) %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @employee.age %>
-</p>
-
-<p>
-  <strong>Gender:</strong>
-  <%= @employee.gender %>
-</p>
-
-<p>
-  <strong>Position:</strong>
-  <%= @employee.position %>
-</p>
-
-<p>
-  <strong>Start date:</strong>
-  <%= @employee.start_date.strftime("%b %d, %Y") %>
-</p>
-
-<%= link_to 'Edit', edit_employee_path(@employee) %> |
-<%= link_to 'Back', employees_path %>
+<div class="container-fluid" id="my-container2">
+  <h3 class="page-headers">Employee Details</h3>
+  <p id="notice"><%= notice %></p>
+  
+  <p>
+    <strong>Name:</strong>
+    <%= @employee.full_name %>
+  </p>
+  
+  <p>
+    <strong>Email:</strong>
+    <%= @employee.email %>
+  </p>
+  
+  <p>
+    <strong>Phone:</strong>
+    <%= number_to_phone(@employee.phone) %>
+  </p>
+  
+  <p>
+    <strong>Age:</strong>
+    <%= @employee.age %>
+  </p>
+  
+  <p>
+    <strong>Gender:</strong>
+    <%= @employee.gender %>
+  </p>
+  
+  <p>
+    <strong>Position:</strong>
+    <%= @employee.position %>
+  </p>
+  
+  <p>
+    <strong>Start date:</strong>
+    <%= @employee.start_date.strftime("%b %d, %Y") %>
+  </p>
+  
+  <%= link_to 'Edit', edit_employee_path(@employee) %> |
+  <%= link_to 'Back', employees_path %>
+</div>

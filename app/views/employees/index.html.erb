@@ -1,10 +1,11 @@
 <div class="container-fluid">
+  <%= link_to 'Create Employee', new_employee_path %>
+</div><br/>
+
+<div class="container-fluid" id="my-container">
   <p id="notice"><%= notice %></p>
   <!--<div class='row py-3 px-3'>-->
   <!--  <div class='col-12 col-sm-8'>-->
-  
-      <%= link_to 'Create Employee', new_employee_path %><br/><br/>
-
       <table id='employee-table' class="table table-hover">
         <thead>
           <tr>
