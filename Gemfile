@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.6.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.7'
 # Use postgresql as the database for Active Record
@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '>= 0.4.0', group: :doc
 gem "actionview", ">= 5.0.7"
 gem "bootstrap-sass"
-# gem 'flatpickr_rails'
+gem 'flatpickr_rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
